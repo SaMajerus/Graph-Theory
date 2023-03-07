@@ -6,4 +6,8 @@ export default class Graph {
   addNode(name){
     this.adjacencyList.set(name, new Set());
   }
+
+  hasNode(name){
+    return false;
+  }
 }
