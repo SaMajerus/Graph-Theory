@@ -33,4 +33,10 @@ describe('Graph', () => {
     expect(graph.adjacencyList.get("Jasmine").has("Ada")).toEqual(true);
     expect(graph.adjacencyList.get("Ada").has("Jasmine")).toEqual(true);
   });
+
+  test('check to see if edge exists in graph', () => {
+    graph.addNode("Jasmine");
+    graph.addNode("Ada");
+    expect(graph.hasEdge("Jasmine", "Ada")).toEqual(false);
+  });
 });
