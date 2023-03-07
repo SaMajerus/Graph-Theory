@@ -5,26 +5,29 @@ export default class Graph {
 
 
   /* 'add___' Methods */
-  addNode(name){
+  addNode(name) {
     this.adjacencyList.set(name, new Set());
   }
 
 
   /* 'has___' Methods */
-  hasNode(name){
-    if(this.adjacencyList.get(name)){
+  hasNode(name) {
+    if (this.adjacencyList.get(name)) {
       return true;
     } //else 
     return false;
   }
 
-  hasEdge(node1, node2){
+  hasEdge(node1, node2) {
+    if(this.adjacencyList.get(node1).has(node2)){
+      return true;
+    } //else 
     return false;
   }
 
 
   /* 'create___' Methods */
-  createEdge(node1, node2){
+  createEdge(node1, node2) {
     let set1 = this.adjacencyList.get(node1);
     let set2 = this.adjacencyList.get(node2);
     set1.add(node2);
