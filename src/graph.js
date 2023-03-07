@@ -39,4 +39,11 @@ export default class Graph {
       let set2 = this.adjacencyList.get(node2).add(node1);
     */
   }
+
+
+  /* 'remove___' Methods */
+  removeEdge(node1, node2) {
+    this.adjacencyList.get(node1).delete(node2);
+    this.adjacencyList.get(node2).delete(node1);
+  }
 }
