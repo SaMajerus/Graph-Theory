@@ -55,4 +55,12 @@ export default class Graph {
       this.adjacencyList.delete(name);
     }
   }
+
+
+  /* Depth-First Search (DFS) algorithm methods */
+  depthFirstReachable(startingNode, targetNode) {
+    if ((!this.adjacencyList.has(startingNode)) || (!this.adjacencyList.has(targetNode))) {
+      return false;
+    }
+  }
 }
