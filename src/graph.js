@@ -62,7 +62,7 @@ export default class Graph {
     if ((!this.adjacencyList.has(startingNode)) || (!this.adjacencyList.has(targetNode))) {
       return false;
     }
-    
+
     let stack = [startingNode];
     let traversedNodes = new Set(); 
     while (stack.length) {
@@ -79,5 +79,6 @@ export default class Graph {
         });
       }
     }
+    return false;
   }
 }
